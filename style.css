@@ -1,0 +1,212 @@
+/* General Reset and Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #d0e6ff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s ease;
+}
+
+/* Container */
+.container {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 95%;
+  max-width: 550px;
+  text-align: center;
+  animation: fadeIn 0.7s ease;
+}
+
+/* Headline */
+.headline {
+  margin: 0;
+  font-size: 2rem;
+  color: #0d47a1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subtext {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+/* Clock Display */
+.clock-display h2 {
+  margin: 5px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1a237e;
+  letter-spacing: 0.5px;
+  animation: bounceIn 1s ease;
+}
+
+/* Input Fields */
+input[type="time"],
+input[type="number"] {
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  width: 80%;
+  background: #ffffffc2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input[type="time"]:focus,
+input[type="number"]:focus {
+  box-shadow: 0 0 0 3px #64b5f6;
+}
+
+/* Buttons */
+button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: linear-gradient(45deg, #42a5f5, #1e88e5);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Alarm List */
+.alarm-section {
+  margin-bottom: 30px;
+}
+
+#alarmsListSection h3 {
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+#alarmsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#alarmsList li {
+  margin: 12px 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px 20px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 0.4s ease;
+  transition: transform 0.2s;
+}
+
+#alarmsList li:hover {
+  transform: scale(1.03);
+}
+
+#alarmsList input[type="time"] {
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Alarm Buttons */
+#alarmsList button {
+  margin-left: 8px;
+  background: #4353ff;
+  border-radius: 10px;
+  padding: 8px 14px;
+}
+
+#alarmsList button:hover {
+  background: #e61919;
+}
+
+/* Puzzle Section */
+.puzzle-section {
+  margin-top: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.puzzle-section input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  margin: 10px 0;
+}
+
+.puzzle-section button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.puzzle-section button:hover {
+  background: #2ea925;
+}
+
+/* Footer */
+.footer-text {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 30px;
+}
+
+/* Ringing Alert */
+body.ringing {
+  background-color: #ffebee;
+  animation: shake 0.4s infinite;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}

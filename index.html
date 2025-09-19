@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>⏰ Smart Puzzle Alarm</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e88e5">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1 class="headline">🌞 Rise & Shine with Smart Alarm</h1>
+      <p class="subtext">“Start your day with a brain boost!” 🧠</p>
+    </header>
+
+    <!-- Live Date, Day, Time -->
+    <section class="clock-display">
+      <h2 id="liveDate">📅 Date</h2>
+      <h2 id="liveDay">📆 Day</h2>
+      <h2 id="liveTime">🕒 Time</h2>
+    </section>
+
+    <!-- Alarm Time Input -->
+    <section class="alarm-section">
+      <label for="alarmTime">🕰️ Select Alarm Time:</label>
+      <input type="time" id="alarmTime" aria-label="Set Alarm Time" />
+      <button id="setAlarmBtn" onclick="addAlarm()">➕ Add Alarm</button>
+    </section>
+
+    <!-- Multiple Alarms List -->
+    <section id="alarmsListSection">
+      <h3>⏰ Alarms Set</h3>
+      <ul id="alarmsList"></ul>
+    </section>
+
+    <!-- Puzzle Challenge -->
+    <section id="puzzleScreen" class="hidden puzzle-section" role="dialog" aria-labelledby="puzzleTitle">
+      <h2 id="puzzleTitle">🧩 Wake-Up Puzzle Challenge</h2>
+      <p id="puzzleQuestion">Get ready for a challenge...</p>
+      <input type="number" id="answerInput" placeholder="💭 Enter your answer" aria-label="Your Puzzle Answer" />
+      <button id="submitAnswerBtn">✅ Submit Answer & Stop Alarm</button>
+    </section>
+
+    <footer>
+      <p class="footer-text">💡 Tip: Solving puzzles in the morning improves focus all day!</p>
+    </footer>
+
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="alarmAudio" src="alarm.mp3" preload="auto" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
